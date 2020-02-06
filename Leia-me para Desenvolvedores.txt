@@ -1,0 +1,7 @@
+Stack do Projeto:
+  - Artes: Inkscape
+  - Backend: PHP
+  - Banco de Dados: MySQL
+  - Mobile: React Native
+
+As Notificações usam o serviço do OneSignal e os Anúncios usam o serviço do Admob, que estão cadastrados na conta do cliente.

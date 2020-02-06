@@ -1,0 +1,55 @@
+* {
+  --night: #141414;
+  --night-darker: #101010;
+  --red: #ff2a2a;
+  --green: #7cb342;
+}
+
+html, body {
+  margin: 0;
+  font-family: Raleway;
+}
+
+input, textarea, button {
+  color: gray;
+  background-color: white;
+  font-family: Raleway;
+  font-size: 18px;
+  min-height: 35px;
+  width: 100%;
+  border: 0;
+  border-radius: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 12px;
+  transition: 0.5s filter;
+}
+
+input:hover, input:focus {
+  filter: brightness(90%);
+}
+
+textarea {
+  min-height: 70px;
+  resize: none;
+  padding-top: 8px;
+}
+
+input[type="submit"], button {
+  width: 80%;
+  background-color: var(--red);
+  color: white;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+.error {
+  color: white;
+}

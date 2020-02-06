@@ -1,0 +1,184 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: calc(100% - 48px);
+  min-height: 50px;
+  background-color: var(--night);
+  padding: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 50px;
+}
+
+header a, #send-notify-button, #terms-button {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  background-color: var(--night-darker);
+  padding: 12px;
+  max-height: calc(100% - 98px);
+}
+
+section {
+  flex: 3;
+  background-color: var(--night);
+  margin: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  position: relative;
+}
+
+#show-winner-button, #delete-button {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  display: none;
+  transition: 0.5s filter;
+}
+
+#delete-button {
+  left: unset;
+  right: 12px;
+}
+
+#show-winner-button:hover, #delete-button:hover {
+  filter: brightness(90%);
+}
+
+section form {
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100%;
+}
+
+section form img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 12px;
+}
+
+section form input[type="number"], section form textarea {
+  display: none;
+}
+
+aside {
+  flex: 2;
+  background-color: var(--night);
+  margin: 8px;
+  overflow: auto;
+}
+
+#aside-elements {
+  width: 100%;
+}
+
+aside div {
+  color: white;
+  padding: 8px;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.5s background-color;
+  position: relative;
+}
+
+aside div i {
+  color: var(--green);
+  font-size: 18px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+#new-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected {
+  background-color: #121212;
+}
+
+aside div:hover {
+  background-color: #121212;
+}
+
+aside h3, aside p {
+  margin: 6px;
+}
+
+
+*::-webkit-scrollbar{
+  width: 8px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 728px) {
+  main {
+    flex-direction: column;
+  }
+
+  section {
+    flex: unset;
+  }
+
+  section form {
+  	justify-content: unset;
+  	margin-top: 64px;
+  }
+
+  aside {
+  	flex: 1;
+  	min-height: 200px;
+  }
+}
+
+#notification-modal .modal, #notification-modal .modal form, #terms-modal .modal, #terms-modal .modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#notification-modal .modal form, #terms-modal .modal form {
+  width: 100%;
+}
+
+#terms-modal .modal form textarea {
+  height: 200px;
+}
